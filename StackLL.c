@@ -26,16 +26,17 @@ void pop(){
         free(temp);
     }
 }
-void display(struct node *top)
+void display(struct node *trav)
 {
-    if(top==NULL){
+    if(trav==NULL){
                  printf("STACK UNDERFLOW\n");
     }
                  else {
+                    while(trav!=NULL){
                     printf("Stack elements are : \n");
-                        printf("%d\n", top->data);
-                        display(top->next);
-                    
+                        printf("%d\n", trav->data);
+                        trav=trav->next;
+                    }
 }}
  void peek()
  {
