@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+        <style>
+            body {
+                margin: 100px;
+                text-align: center;
+            }
+            .button {
+                width: 50%;
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Change Background Color</h1>
+            <div>
+                <button class="button" onclick="changeBgColor()">Change</button>
+            </div>
+        </div>
+
+        <script>
+            function changeBgColor() {
+                // Change the background color of the body element
+                document.body.style.backgroundColor = randomColor();
+            }
+
+            function randomColor() {
+                const hexa = '1234567890ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += hexa[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        </script>
+    </body>
+</html>
